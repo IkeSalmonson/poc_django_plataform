@@ -1,5 +1,8 @@
 # Django CRUD and restricted access by user role 
     This repository contains dockerized DJANGO project for a plataform where users with different roles have access to differente resources. <br>
+    Admin users register all other roles.
+    Service provider managers register service providers.
+    Serivce providers login and have access to their own profile page. 
 
 
 ## Comands to start up the project 
@@ -59,8 +62,15 @@ django-admin startapp core_entity
 
 
 ## Specification 
- 
-## Page>/register_user CRUD users register by admin on the plataform 
+
+### Entities data models
+Importante atributes: <br>
+ -  manager => Name, email , contact, registered_providers 
+ - service_provider => Name, email, contact, service_type, cost_estimate, region
+
+
+
+## Page>/register_manager CRUD manager users by admin on the plataform 
 - [ ]  Frontend
   - [ ] Register User Page
    - [ ] New User form
@@ -72,7 +82,7 @@ django-admin startapp core_entity
     - [ ] Create API CRUD user
 
 
-## Page>/register_provider CRUD marcham register service provider page on the plataform 
+## Page>/register_provider CRUD service provider by service managers on the plataform 
 - [ ]  Frontend
   - [ ] Register Service Provider Page
    - [ ] New provider form
