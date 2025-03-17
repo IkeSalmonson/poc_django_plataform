@@ -51,17 +51,12 @@ Admin credentials: root 123123
 Run inside the container.
 Commands: 
 ```
-django-admin startproject
+django-admin startproject django_plataform
 ```
 ```
-python manage.py startapp
+django-admin startapp core_entity
 ```
-```
-python manage.py migrate
-```
-```
-python manage.py createsuperuser 
-```
+
 
 ## Specification 
  
@@ -77,10 +72,10 @@ python manage.py createsuperuser
     - [ ] Create API CRUD user
 
 
-## Page>/register_artist CRUD marcham register service provider page on the plataform 
+## Page>/register_provider CRUD marcham register service provider page on the plataform 
 - [ ]  Frontend
   - [ ] Register Service Provider Page
-   - [ ] New artist form
+   - [ ] New provider form
         - [ ] input validation for fields
    - [ ] New service provider button
 
@@ -92,9 +87,9 @@ python manage.py createsuperuser
 - [ ]  Frontend
   - [ ] Profile page
    - [ ] information td 
-   - [ ] contact artist button
-   - [ ] request budget artist button
-   - [ ] chat artist button
+   - [ ] contact provider button
+   - [ ] request budget provider button
+   - [ ] chat provider button
 
 - [ ] Backend
     - [ ] Create API get service provider by id 
@@ -107,6 +102,6 @@ python manage.py createsuperuser
    - [ ] information td 
 
 - [ ] Backend
-    - [ ] Create API search artist by atributes 
+    - [ ] Create API search provider by atributes 
   
    
