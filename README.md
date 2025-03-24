@@ -1,8 +1,6 @@
-# Django CRUD and restricted access by user role 
-This repository contains dockerized DJANGO project for a plataform where users with different roles have access to differente resources. <br>
+# Django CRUD
+This repository contains dockerized DJANGO project for a plataform where Admins register service providers. <br>
 Admin users register all other roles.<br>
-Service provider managers register service providers. <br>
-Serivce providers login and have access to their own profile page.  <br>
 
 
 ## Comands to start up the project 
