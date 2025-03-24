@@ -60,4 +60,6 @@ Importante atributes: <br>
     - [x] Create Migration with tabel user
     - [x] Create API CRUD user
 
-
+# Reference
+[YT Django CRUD Tutorial by Tony Teach Tech](https://www.youtube.com/watch?v=SLTXTG6ZXIM&list=PL_vyuxE-AO-D0Fg-0DyHbekAXOYgRYlWA) <br>
+[Repo Django CRUD by TonyFlo](https://github.com/tonyflo/django-crud)
