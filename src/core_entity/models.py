@@ -13,7 +13,7 @@ class Service_provider(models.Model):
             'R3' :'region_3',} 
     SERVICE_TYPE = {'P':'painter','B': 'bartender','B2':'bouncer'}
  
-    id = models.BigAutoField(primary_key=True)
+    #id = models.BigAutoField(primary_key=True)
     name = models.CharField(max_length=50)
     email = models.EmailField()
     contact = models.CharField(max_length=16)

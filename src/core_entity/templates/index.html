@@ -2,39 +2,43 @@
 {% block content %}
 <h1> Hello world </h1>
 <a href="{% url 'about' %}"> About Page </a>
-<table>
-        <tr>
-                <th> Name </th>
-                <th> Email   </th>
-                <th> Contact   </th>
+<form method="post" action="{% url 'index' %}">
+        {% csrf_token %}
+        <table class="table table-border table-light ">               
 
-                <th> Service </th>
-                <th> Cost Estimate </th>
-                <th> Region </th>
-                <th> Action   </th>
+                <tr>
+                        <th> Name </th>
+                        <th> Email </th>
+                        <th> Contact </th>
 
-        </tr>
-        <form>
-                <tr> {% for field in form %}
-                        <td> {{field}} </td>
-                        {% endfor %}
-                <td> <button name="save"> Save</button> </td>
+                        <th> Service </th>
+                        <th> Cost Estimate </th>
+                        <th> Region </th>
+                        <th> Action </th>
+
                 </tr>
+                {% if not form.instance.id %}
+                {% include 'save.html' %}
+                {% endif %}
 
-        </form>
+                {% for service_provider in service_providers %}
+                <tr>
+                        {% if   form.instance.id == service_provider.id %}
+                        {% include 'save.html' %}
+                        {% else %}
+                        <td>{{service_provider.name}}</td>
+                        <td></td>
+                        <td></td>
+                        <td> {{service_provider.get_service_type_display}}</td>
+                        <td></td>
+                        <td> {{service_provider.get_region_display}} </td>
+                        <td> <button class='btn btn-success' formnovalidate  name='edit'  value="{{service_provider.id}}"> Edit </button> <button class='btn btn-danger ' formnovalidate  name='delete'value="{{service_provider.id}}"> Delete </button></td>
+               {% endif %}
+                </tr>
+                {% endfor %}
 
-        {% for service_provider in service_providers %}
-        <tr>
-                <td>{{service_provider.name}}</td>
-                <td></td> <td></td>
-                <td> {{service_provider.get_service_type_display}}</td>
-                <td></td>
-                <td> {{service_provider.get_region_display}} </td>
-                <td> <button name='edit'> Edit </button>   <button name='delete'> Delete </button></td>
-        </tr>
-        {% endfor %}
 
-
-</table>
+        </table>
+</form>
 
 {% endblock %}

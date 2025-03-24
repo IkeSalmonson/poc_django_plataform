@@ -9,6 +9,28 @@ def index(request):
     service_providers = Service_provider.objects.all()
     context['service_providers'] = service_providers 
     context['title'] = 'UserTable'
+    if request.method == 'POST':
+        if 'save' in request.POST:
+            pk = request.POST.get('save') 
+            if not pk: 
+                form = Service_provider_form(request.POST)
+ 
+            else: 
+                service_provider = Service_provider.objects.get(id=pk)
+                form = Service_provider_form(request.POST, instance=service_provider)
+            form.save()
+            form = Service_provider_form()
+
+
+        elif 'edit' in request.POST:
+            pk = request.POST.get('edit')
+            service_provider = Service_provider.objects.get(id=pk)
+            form = Service_provider_form(instance=service_provider)
+        elif 'delete' in request.POST:
+            pk = request.POST.get('delete')
+            service_provider = Service_provider.objects.get(id=pk)
+            service_provider.delete()
+             
     context['form'] = form
     return render(request, 'index.html', context)
     #return HttpResponse('Hello World! ')
