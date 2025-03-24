@@ -68,53 +68,18 @@ django-admin startapp core_entity
 
 ### Entities data models
 Importante atributes: <br>
- -  manager => Name, email , contact, registered_providers 
  - service_provider => Name, email, contact, service_type, cost_estimate, region
 
 
 
-## Page>/register_manager CRUD manager users by admin on the plataform 
-- [ ]  Frontend
-  - [ ] Register User Page
-   - [ ] New User form
-        - [ ] input validation for fields
-   - [ ] New User button
+## Page>/ CRUD service providers by admin on the plataform 
+- [x]  Frontend
+  - [x] Register User Page
+   - [x] New User form
+        - [x] input validation for fields
 
-- [ ] Backend
-    - [ ] Create Migration with tabel user
-    - [ ] Create API CRUD user
+- [x] Backend
+    - [x] Create Migration with tabel user
+    - [x] Create API CRUD user
 
 
-## Page>/register_provider CRUD service provider by service managers on the plataform 
-- [ ]  Frontend
-  - [ ] Register Service Provider Page
-   - [ ] New provider form
-        - [ ] input validation for fields
-   - [ ] New service provider button
-
-- [ ] Backend
-    - [ ] Create Migration with tabel service_provider
-    - [ ] Create API CRUD service provider
-
-## Page>/service_provider/{id} shows service provider profile on the plataform 
-- [ ]  Frontend
-  - [ ] Profile page
-   - [ ] information td 
-   - [ ] contact provider button
-   - [ ] request budget provider button
-   - [ ] chat provider button
-
-- [ ] Backend
-    - [ ] Create API get service provider by id 
-  
-## Page>/search/{search terms} shows service provider profile that match search terms on the plataform 
-- [ ]  Frontend
-  - [ ] Search page
-   - [ ] search terms input 
-   - [ ] filter search options
-   - [ ] information td 
-
-- [ ] Backend
-    - [ ] Create API search provider by atributes 
-  
-   
