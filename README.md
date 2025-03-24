@@ -6,25 +6,7 @@ Admin users register all other roles.<br>
 ## Comands to start up the project 
   Project requirements for locally installed tools:    <br>
     - Docker    
-
-### // To Do  First use
-<br> 
-
- Create Docker Images locally :
-```
-docker compose build  
-```
-Setup backend dependencies and donwload files to local volume: 
-```
-docker run  -p 8000:8000  -v $(pwd):/var/www/html   'pocdjangoplataform:prod'  sh init.sh
-```
-
-### // To Do  To run containers
- To run all services after first time setup:
-```
-docker compose up 
-```
-
+ 
 # Development
 
  To build a development Docker Image:
@@ -45,7 +27,7 @@ Access on browser via: http://localhost:8000/
 
 Admin Panel: http://localhost:8000/admin
 
-Admin credentials: root 123123
+Admin credentials: admin_user / admin_user
 
 
 # References 
@@ -67,8 +49,6 @@ django-admin startapp core_entity
 ### Entities data models
 Importante atributes: <br>
  - service_provider => Name, email, contact, service_type, cost_estimate, region
-
-
 
 ## Page>/ CRUD service providers by admin on the plataform 
 - [x]  Frontend
